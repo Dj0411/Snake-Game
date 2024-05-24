@@ -39,10 +39,8 @@ while game_on:
         scoreboard.end()
         game_on=False
 
-    for part in snake.snakes:
-        if(part == snake.head ):
-            pass
-        elif(snake.head.distance(part) < 10):
+    for part in snake.snakes[1:]:
+        if(snake.head.distance(part) < 10):
             game_on=False
             scoreboard.end()        
         
